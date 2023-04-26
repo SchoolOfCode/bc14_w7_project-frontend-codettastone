@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -9,19 +9,18 @@ import './index.css';
 
 function NavScrollExample() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
+    <Navbar bg="custom" expand="lg" className="navbar-custom">
+      <Container fluid >
         <Navbar.Brand href="#">Codetta Stone</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: '100px'}}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home </Nav.Link>
-            <Nav.Link href="#action2">Register</Nav.Link>
-            <NavDropdown title="Learning Resources" id="navbarScrollingDropdown">
+            <Nav.Link href="#action1" style={{color: "black" }}>HOME </Nav.Link>
+            <NavDropdown title="LEARNING RESOURCES" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Resource 1</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Resource 2
@@ -31,18 +30,22 @@ function NavScrollExample() {
                 Resource 3
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#action2">REGISTER</Nav.Link>
             <Nav.Link href="#action6">
-              Log In
+              LOG IN
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
-              aria-label="Search"
+              className="me-2 custom-search-bar"
+                         aria-label="Search"
+              style={{color: "white" }}
             />
-            <Button variant="outline-success">Search</Button>
+            {/* <Button variant="outline-success"
+            style={{ backgroundColor: "pink", color: "white" }}
+            >Search</Button> */}
           </Form>
         </Navbar.Collapse>
       </Container>

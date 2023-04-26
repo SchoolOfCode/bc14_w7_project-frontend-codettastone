@@ -1,39 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
-* {
-  margin: 0;
+/* base styles  */
+/* * {
+   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #000000;
+  background-image: url("./Images/orange_pinta_image.jpg");
+  
 }
 
+html {
+  background-image: url("./Images/pinta_image.jpg");
+} */
 .navbar {
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid #f2f2f2;
-  background-color: white;
+  border-bottom: 1px solid ;
+  font-weight: bold;
+
+  
 }
 
 .navbar-brand {
-  color: #f1356d;
   font-size: 28px;
   font-weight: bold;
   margin-right: 30px;
 }
 
 .nav-link {
-  color: #333;
+  color: black !important;
   margin-left: 30px;
   font-size: 18px;
 }
 
-/*.nav-link:hover {
-  color: #f1356d;
+.nav-link:hover {
+  color: white !important;
 }
-
+/*
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -66,7 +72,7 @@
 }
 */
 .navbar a:hover {
-    color: #f1356d;
+    color: #f1f1f1;
   }
   .content {
     max-width: 600px;
@@ -74,7 +80,7 @@
     padding: 20px;
   }
   /* blog previews / list */
-  .blog-preview {
+  /* .blog-preview {
     padding: 10px 16px;
     margin: 20px 0;
     border-bottom: 1px solid #fafafa;
@@ -86,4 +92,11 @@
     font-size: 20px;
     color: #f1356d;
     margin-bottom: 8px;
-  }
+  } */
+
+
+input::placeholder {
+  font-weight: normal;
+  opacity: 20;
+  color: white !important;
+}
