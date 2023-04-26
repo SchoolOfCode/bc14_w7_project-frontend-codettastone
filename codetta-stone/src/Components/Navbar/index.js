@@ -4,12 +4,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './index.css';
+
 
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">Codetta Stone</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,20 +19,20 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link href="#action1">Home </Nav.Link>
+            <Nav.Link href="#action2">Learning Resources</Nav.Link>
+            <NavDropdown title="Quizzes" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">JavaScript Easy</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                JavaScript Medium
               </NavDropdown.Item>
-              <NavDropdown.Divider />
+              {/* <NavDropdown.Divider /> */}
               <NavDropdown.Item href="#action5">
-                Something else here
+                JavaScript Hard
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="#action6">
+              Log In
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
