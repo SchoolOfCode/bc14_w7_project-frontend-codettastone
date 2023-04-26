@@ -2,43 +2,45 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Alert from 'react-bootstrap/Alert';
-
+import { Container, Row, Col } from 'react-bootstrap';
+import './index.css'
 
 
 export default function Sidebar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  return (
+  return ( //( <Col lg={3} style={{ marginTop: '250px' }}> 
+  
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch
+    
+      <Button variant="primary" onClick={handleShow} className="sidebar-button">
+        Open Quiz Section
       </Button>
-      <Offcanvas show={show} onHide={handleClose} responsive="lg">
+      <Offcanvas show={show} onHide={handleClose} className = "offcanvas" responsive="lg">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Quiz</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          <p className="mb-0">
-            This is content within an <code>.offcanvas-lg</code>.
-          </p>
-        </Offcanvas.Body>
       </Offcanvas>
-      <Button variant="primary" className="d-lg-none" onClick={handleShow}>
-        Launch
-      </Button>
-      <Alert variant="info" className="d-none d-lg-block">
-        Resize your browser to show the responsive offcanvas toggle.
-      </Alert>
+      {/* <Button variant="primary" className="d-lg-none" onClick={handleShow}>
+        Button 2
+      </Button> */ }
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Please select your Quiz.</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        <Offcanvas.Body className = "sidebarbody">
+        
+        <ul className="list-unstyled mb-0">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        
         </Offcanvas.Body>
       </Offcanvas>
+    
     </>
+   // </Col>
   );
 }
