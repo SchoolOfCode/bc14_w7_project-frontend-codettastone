@@ -6,8 +6,8 @@
   .sidebar-button {
     position: absolute;
     margin-top: 20px;
-     top: 50px; /* set the distance from the bottom of the page */
-    left: 5%; /* center the button horizontally */
+    top: 50px; /* set the distance from the bottom of the page */
+    left: 7%; /* center the button horizontally */
     transform: translateX(-50%);
   }
   
