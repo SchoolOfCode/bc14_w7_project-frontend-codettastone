@@ -1,8 +1,11 @@
 
 import './App.css';
+import NavScrollExample from "../Navbar";
 
 function App() {
-  return 
+  return (
+    <NavScrollExample/>
+  )
     
    
   
