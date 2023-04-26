@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import Sidebar from "../SideBar/index.js";
 
 function Quiz() {
   console.log("Quiz component loaded");
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
-
   const fetchQuestions = async (difficulty) => {
     const response = await fetch(
       `https://quizapi.io/api/v1/questions?apiKey=OKhUQ6mCAkyNpwrGnpbYMkyR5eLflzWqJnbO7JcX&category=code&difficulty=${difficulty}&limit=10&tags=HTML`
@@ -14,13 +14,11 @@ function Quiz() {
     setAnswers(new Array(data.length).fill(null));
     console.log("Questions fetched successfully:", data);
   };
-
   const handleAnswerChange = (index, answer) => {
     const newAnswers = [...answers];
     newAnswers[index] = answer;
     setAnswers(newAnswers);
   };
-
   const handleSubmit = () => {
     let score = 0;
     for (let i = 0; i < answers.length; i++) {
@@ -32,12 +30,9 @@ function Quiz() {
     const correctAnswers = questions.map((question) => question.correct_answer);
     setAnswers(correctAnswers);
   };
-
   return (
     <div>
-      <button onClick={() => fetchQuestions("Easy")}>Start Easy Quiz</button>
-      <button onClick={() => fetchQuestions("Medium")}>Start Medium Quiz</button>
-      <button onClick={() => fetchQuestions("Hard")}>Start Hard Quiz</button>
+      <Sidebar fetchQuestions={fetchQuestions} />
       {questions.length > 0 && (
         <div>
           {questions.map((question, index) => (
@@ -73,5 +68,4 @@ function Quiz() {
     </div>
   );
 }
-
 export default Quiz;

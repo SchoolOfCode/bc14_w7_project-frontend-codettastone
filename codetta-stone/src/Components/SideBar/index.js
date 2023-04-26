@@ -4,9 +4,10 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Alert from 'react-bootstrap/Alert';
 import { Container, Row, Col } from 'react-bootstrap';
 import './index.css'
+import QuizButtons from '../QuizButtons/index.js';
 
 
-export default function Sidebar() {
+export default function Sidebar({ fetchQuestions}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -29,14 +30,10 @@ export default function Sidebar() {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Please select your Quiz.</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className = "sidebarbody">
-        
-        <ul className="list-unstyled mb-0">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
-        
+        <Offcanvas.Body className = "sidebarbody">       
+        <div>
+        <QuizButtons fetchQuestions={fetchQuestions} />
+    </div>
         </Offcanvas.Body>
       </Offcanvas>
     
