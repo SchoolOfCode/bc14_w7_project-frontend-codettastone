@@ -5,9 +5,9 @@ function Quiz() {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
 
-  const fetchQuestions = async () => {
+  const fetchQuestions = async (difficulty) => {
     const response = await fetch(
-      "https://quizapi.io/api/v1/questions?apiKey=OKhUQ6mCAkyNpwrGnpbYMkyR5eLflzWqJnbO7JcX&difficulty=Easy&limit=10&tags=JavaScript"
+      `https://quizapi.io/api/v1/questions?apiKey=OKhUQ6mCAkyNpwrGnpbYMkyR5eLflzWqJnbO7JcX&category=code&difficulty=${difficulty}&limit=10&tags=HTML`
     );
     const data = await response.json();
     setQuestions(data);
@@ -35,7 +35,9 @@ function Quiz() {
 
   return (
     <div>
-      <button onClick={fetchQuestions}>Start Easy Quiz</button>
+      <button onClick={() => fetchQuestions("Easy")}>Start Easy Quiz</button>
+      <button onClick={() => fetchQuestions("Medium")}>Start Medium Quiz</button>
+      <button onClick={() => fetchQuestions("Hard")}>Start Hard Quiz</button>
       {questions.length > 0 && (
         <div>
           {questions.map((question, index) => (
@@ -72,7 +74,4 @@ function Quiz() {
   );
 }
 
-
 export default Quiz;
-
-
