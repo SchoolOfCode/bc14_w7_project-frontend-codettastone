@@ -20,15 +20,15 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link href="#action1">Home </Nav.Link>
-            <Nav.Link href="#action2">Learning Resources</Nav.Link>
-            <NavDropdown title="Quizzes" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">JavaScript Easy</NavDropdown.Item>
+            <Nav.Link href="#action2">Register</Nav.Link>
+            <NavDropdown title="Learning Resources" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Resource 1</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                JavaScript Medium
+                Resource 2
               </NavDropdown.Item>
               {/* <NavDropdown.Divider /> */}
               <NavDropdown.Item href="#action5">
-                JavaScript Hard
+                Resource 3
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#action6">
