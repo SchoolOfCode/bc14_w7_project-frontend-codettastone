@@ -5,13 +5,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 
 function NavScrollExample() {
   return (
+  
     <Navbar bg="custom" expand="lg" className="navbar-custom">
       <Container fluid >
-        <Navbar.Brand href="#">Codetta Stone</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/">Codetta Stone</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,7 +21,7 @@ function NavScrollExample() {
             style={{ maxHeight: '100px'}}
             navbarScroll
           >
-            <Nav.Link href="#action1" style={{color: "black" }}>HOME </Nav.Link>
+            <Nav.Link as={NavLink} to="/" style={{color: "black" }}>HOME </Nav.Link>
             <NavDropdown title="LEARNING RESOURCES" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Resource 1</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -30,9 +32,9 @@ function NavScrollExample() {
                 Resource 3
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action2">REGISTER</Nav.Link>
-            <Nav.Link href="#action6">
-              LOG IN
+            <Nav.Link as={NavLink} to="/register">REGISTER</Nav.Link>
+            <Nav.Link as={NavLink} to="/login">LOG IN
+              
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
@@ -50,6 +52,8 @@ function NavScrollExample() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+ 
   );
 }
 
