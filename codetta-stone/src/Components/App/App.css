@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,50 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/*Main app styling elements*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #000000;
+  background-image: url("./Images/orange_pinta_image.jpg");
+  
+}
+html {
+  background-image: url("./Images/pinta_image.jpg");
+}
+
+/* Login form styling*/
+.mainBody {
+  background-image: url("./Images/pinta_image.jpg");
+}
+.vh-100 {
+  background-image: url("./Images/pinta_image.jpg");  
+}
+.col-lg-6 {
+  background-image: url("./Images/pinta_image.jpg");
+  border-radius: 25px;
+}
+.shadow {
+  border-radius: 15px;
+}
+.card-body {
+  border-radius: 25px;
+}
+.mb-5 {
+  margin-top: 25px;
+}
+
+/* Register form styling*/
+.container {
+  background-image: url("./Images/pinta_image.jpg");
+}
+.reg-area {
+  background-image: url("./Images/pinta_image.jpg");
+}
+.mb-2:hover {
+  color: white ;
 }
