@@ -90,4 +90,23 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./Images/pinta_image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100%;
 }
+
+
+.quizButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quizList {
+  list-style: none;
+  margin: 20px 0px;
+}
+
+

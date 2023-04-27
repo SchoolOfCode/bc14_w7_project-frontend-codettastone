@@ -38,7 +38,7 @@ function Quiz() {
           {questions.map((question, index) => (
             <div key={question.id}>
               <h3>{question.question}</h3>
-              <ul>
+              <ul className="quizList">
                 {Object.entries(question.answers)
                   .filter(([key, value]) => value !== null)
                   .slice(
@@ -62,7 +62,7 @@ function Quiz() {
               </ul>
             </div>
           ))}
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit} style={{marginBottom: "20px"}}>Submit</button>
         </div>
       )}
     </div>
